@@ -1,0 +1,13 @@
+﻿@model MVC_ComicBooksCharacters.Models.ComicBookContext
+@{
+}
+
+<h1 class="text-center">SUPER HEROS</h1>
+<div class="container">
+    @foreach (MVC_ComicBooksCharacters.Models.ComicBook c in Model.ComicBooks)
+    {
+        <h1 class="text-center">@c.ComicBookTitle</h1>
+        <img class="align-self-center" src=@Url.Content(c.ComicBookImage) />
+        <p class="font-weight-bolder text-center">Description:</p><p> @c.ComicBookDesc</p>
+    }
+</div>
