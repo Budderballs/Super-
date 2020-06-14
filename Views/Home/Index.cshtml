@@ -2,12 +2,14 @@
 @{
 }
 
-<h1 class="text-center">SUPER HEROS</h1>
+<h1 class="text-center font-weight-bolder border border-primary">SUPER HEROS</h1>
 <div class="container">
     @foreach (MVC_ComicBooksCharacters.Models.ComicBook c in Model.ComicBooks)
     {
-        <h1 class="text-center">@c.ComicBookTitle</h1>
-        <img class="align-self-center" src=@Url.Content(c.ComicBookImage) />
-        <p class="font-weight-bolder text-center">Description:</p><p> @c.ComicBookDesc</p>
+     <div class=" border border-dark rounded text-center">
+        <h1 class="font-weight-bold">@c.ComicBookTitle</h1>
+        <img class="border border-dark rounded-circle mx-auto d-block" src=@Url.Content(c.ComicBookImage) />
+        <p class="border border-dark rounded"><em><strong>@c.ComicBookDesc</strong></em></p>
+     </div>
     }
 </div>
